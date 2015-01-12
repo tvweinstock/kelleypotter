@@ -1,0 +1,686 @@
+/*
+Theme Name: Kelley Potter
+Description: Custom Theme for Kelley Potter
+Version: 1.0
+Author: Tobi Weinstock
+Author URI: http://tobiweinstock.com
+*/
+
+
+/* =============================================================================
+                   Normalize, border box and clearfix 
+   ========================================================================== */
+
+   /*colors*/
+/*  brown: #362412
+  darker brown: #1a0800
+  super light blue: #ceebe9
+  cream: #fff9db
+  teal: #36b3a6
+  jordyns logo blue: #37bdba*/
+  /*new blue: rgb(153, 236, 234)*/
+  /*new blue: 6adbd8*/
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.clearfix:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; } .clearfix {display: inline-block; } html[xmlns] .clearfix {display: block; } * html .clearfix {height: 1%; } 
+
+img {
+  max-width:100%;
+}
+
+
+/* Global Classes / Wordpress Specific */
+.aligncenter    { text-align: center; margin: 0 auto; }
+.alignleft      { float: left; }
+.alignright     { float: right; }
+img.alignleft     { padding-right: 5px;}
+img.alignright    { padding-left: 5px; }
+.clear        { width:100%; float:left; clear:both;}
+
+
+/* Typography */
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  color: #6adbd8;
+  padding: 40px 0 20px;
+}
+h1 { font-size: 50px; }
+h2 { font-size: 40px; }
+h3 { font-size: 40px; }
+h4 { font-size: 25px; }
+h5 { font-size: 20px; }
+h6 { font-size: 15px; }
+
+h3.widget-title {
+  font-size: 20px;
+}
+
+
+/* =============================================================================
+                   Default Styling 
+   ========================================================================== */
+
+body {
+  background: #FDF5E6 url(i/bg2_dark.png); 
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+  color:#333; /* <-- This is the font colour for the pages text */
+  font-weight: 300;
+}
+
+a {
+  color:rgb(106, 219, 216); /* <-- Change the link colour here! */
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.innerWrapper {
+  max-width:1000px;
+  margin:0 auto;
+  padding-bottom: 15px;
+}
+
+.left {
+  float:left;
+  width:68%;
+  margin-right: 2%;
+  padding-top: 20px;
+}
+
+.right {
+  float: left;
+  width: 30%;
+  padding-top: 20px;
+}
+
+.full {
+  width:100%;
+}
+
+.light-body {
+  background: #fff;
+  width: 92%;
+  padding: 20px;
+  margin: 4% auto;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+span.dividerSmall {
+  border-top: 2px solid #6adbd8;
+  display: block;
+  margin: 1% 47%;
+}
+
+
+/*blockquotes*/
+blockquote {
+  background: #F7F7F7;
+  margin:0;
+  padding:20px;
+}
+  blockquote p {
+    margin-top: 0;
+  }
+
+/*tables*/
+table td {
+  padding:10px;
+}
+table tr td:first {
+  padding-right: 0;
+}
+
+/*def lists*/
+dt {
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+dd {
+  padding:10px;
+  margin-left: 10px;
+}
+
+/*lists*/
+ul li,ol li {
+  padding:3px;
+}
+
+/*PRE*/
+
+pre {
+  background: #F7F7F7;
+  padding:10px;
+  border-radius: 4px;
+  border:1px solid #ccc;
+}
+/* =============================================================================
+                   Sidebar 
+   ========================================================================== */
+.sidebar {
+  width:30%;
+  float:left;
+  padding-top: 20px;
+}
+  .sidebar ul {
+    margin:0;
+    padding:0;
+  }
+    .sidebar ul li {
+      list-style: none;
+    }
+
+
+/* =============================================================================
+                   Footer 
+   ========================================================================== */
+
+.footer {
+  clear:both;
+  text-align: center;
+  font-size: 20px;
+  width: 100%;
+  position: relative;
+  
+}
+
+.columnContainer {
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+.footerContact {
+  font-size: 25px;
+  width: 35%;
+  margin-left: 20%;
+  text-align: left;
+  float: left;
+}
+
+.footerContact .fa {
+  color: #fff;
+  background: #37bdba;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px dotted #fff;
+  padding: 10px 10px 10px 12px;
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.footerContact ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footerContact li {
+  padding: 10px 10px 10px 0;
+}
+
+.footerContact span {
+  display: inline-block;  
+  font-weight: 100;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.footerContact a {
+  display: inline-block;
+  color: #fff;
+}
+
+.footerContact .fa:hover {
+  color: rgb(153, 236, 234);
+  background: #fff;
+  border: 2px dotted rgb(153, 236, 234);
+  cursor: pointer;
+}
+
+.cred {
+  display: inline;
+  position: relative;
+  top: 35px;
+  right: 50px;
+}
+
+
+.copyright {
+  color: #fff;
+  font-weight: 100;
+  padding-top: 30px;
+  clear: both;
+}
+
+
+/* =============================================================================
+                   Navigation 
+   ========================================================================== */
+
+  .logo {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .brand {
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+  }
+
+
+.diamondMenu {
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: rgb(54, 190, 189);
+  position: relative;
+  top: -10px;
+  margin:0 10px;
+  display: inline-block;
+}
+.diamondMenu:after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: rgb(54, 190, 189);
+  display: inline-block;
+}
+
+  .menuWrap  {
+    width:100%;
+    background: rgb(153, 236, 234);
+    border-bottom: 2px solid #3E5363;
+  }
+  .menuWrap ul {
+    margin:0;
+    padding:0;
+    text-align: center;
+  }
+    .menuWrap ul li {
+      display:inline;
+      padding:0;
+    }
+
+      .menuWrap ul li a {
+        font-size: 24px;
+        font-weight: 300;
+        padding:20px;
+        text-transform: uppercase;
+        margin:0 5px;
+        color:#1a0800; 
+        display: inline-block;
+        position: relative;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+      }
+      .menu ul li a:after {
+        content: '';
+        height: 1px;
+        bottom: 10px;
+        position: absolute;
+        left: 50%;
+        width: 0;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in;
+        background: #000;
+      }
+      .menu ul li a:hover:after {
+        width: 100%;
+        left: 0;
+        bottom: 10px;
+        background: #37bdba;
+      }
+
+        .menu ul li a:hover {
+          color: #37bdba;
+        }
+
+
+/* =============================================================================
+                   Hero Styling
+   ========================================================================== */
+
+.hero {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.hero h3 {
+  color: #6adbd8;
+
+}
+
+.hero h1 a {
+  color: #36BEBD;
+}
+
+
+
+/* ============================================================================
+                   Main Page
+   ========================================================================== */
+
+hr.carved {
+  clear: both;
+  float: none;
+  width: 5%;
+  height: 1px;
+  margin: 2% 50%;
+  border: none;
+  background: #ddd;
+  background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0.5, rgb(221,221,221)), color-stop(0.5, rgb(255,255,255)) );
+  background-image: -moz-linear-gradient( center top, rgb(221,221,221) 50%, rgb(255,255,255) 50% );
+}
+
+.main-img-container {
+  width: 35%;
+  margin: 20px;
+  float: left;
+}
+
+.main-img-container img {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 0 40px 20px 0;
+  position: relative;
+  top: 40px;
+}
+
+.welcome {
+  padding: 20px;
+  border: 10px solid #fff;
+  border-bottom-width: 60px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: rgba(85, 85, 85, 0.8);
+  color: #fff;
+  font-weight: 100;
+  font-size: 22px;
+}
+
+
+
+/* =============================================================================
+                   CUSTOM HOME PAGE STYLE
+   ========================================================================== */
+
+
+.homeColumn {
+  width:32%;
+  float: left;
+}
+  .homeColumn:nth-child(3){
+    margin:0 2%;
+  }
+
+  .homeColumn li {
+    list-style: none;
+    width:100%;
+    border-top: 1px solid #000;
+    padding:10px 0;
+  }
+
+
+  /* =============================================================================
+                   ABOUT PAGE STYLE
+   ========================================================================== */
+
+.aboutWrapper {
+  
+}
+
+.aboutImg {
+  margin: 0 15%;
+  width: 70%;
+}
+
+
+.fancy {
+  line-height: 0.5;
+  text-align: center;
+  padding-top: 20px;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;  
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid rgb(102, 50, 0);
+  border-top: 1px solid rgb(102, 50, 0);
+  top: 3px;
+  width: 60px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+/* =============================================================================
+                   Contact Page 
+   ========================================================================== */
+
+   .leftContact {
+      width: 50%;
+      float: left;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 22px;
+      padding: 20px;
+      font-weight: 100;
+   }
+
+   .rightContact {
+      width: 48%;
+      float: left;
+      margin-left: 2%;
+      color: #fff;
+      padding-bottom: 40px;
+   }
+
+   /* =============================================================================
+                      Event Page
+      ========================================================================== */
+  .event-heading-container {
+    position: relative;
+  }
+  .event-heading {
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px 0 20px;
+  }
+  .rings {
+    width: 30%;
+    position: relative;
+    right: 40px;
+    bottom: 25px;
+  }
+
+  .event-images {
+    width: 40%;
+    float: left;
+    margin-right: 3%;
+    padding-top: 35px;
+    
+  }
+  .img-container {
+    position: absolute;
+    left: 140px;
+    bottom: 0;
+  }
+
+  .event-images img {
+      border-radius: 10px;
+  }
+
+
+
+/* =============================================================================
+                   Comment Styling 
+   ========================================================================== */
+
+#comments .navigation { padding:0 0 18px; }
+h3#comments-title, h3#reply-title {
+  color:#000000;
+  font-weight:700;
+  font-size:20px;
+  margin-bottom:0;
+}
+h3#comments-title { padding:24px 0; }
+.commentlist li.comment {
+  border-bottom:1px solid #e7e7e7;
+  line-height:24px;
+  position:relative;
+  clear:both;
+  margin:0 0 24px;
+  padding:0 0 0 56px;
+}
+.commentlist li:last-child {
+  border-bottom:none;
+  margin-bottom:0;
+}
+#comments .comment-body ul, #comments .comment-body ol { margin-bottom:18px; }
+#comments .comment-body p:last-child { margin-bottom:6px; }
+#comments .comment-body blockquote p:last-child { margin-bottom:24px; }
+.commentlist ol { list-style:decimal; }
+.commentlist .avatar {
+  position:absolute;
+  top:4px;
+  left:0;
+}
+.comment-author cite {
+  color:#000000;
+  font-style:normal;
+  font-weight:700;
+}
+.comment-author .says { font-style:italic; }
+.comment-meta {
+  font-size:12px;
+  margin:0 0 5px;
+}
+.comment-meta a:link, .comment-meta a:visited {
+  color:#888888;
+  text-decoration:none;
+}
+.reply {
+  font-size:12px;
+  padding:0 0 24px;
+}
+.reply a, a.comment-edit-link { color:#888888; }
+.commentlist .children li {
+  border:none;
+  margin:0;
+}
+#comments .pingback {
+  margin-bottom:18px;
+  padding-bottom:18px;
+  border-bottom:1px solid #e7e7e7;
+}
+.commentlist li.comment+li.pingback { margin-top:-6px; }
+#comments .pingback p {
+  color:#888888;
+  font-size:12px;
+  line-height:18px;
+  display:block;
+  margin:0;
+}
+#comments .pingback .url {
+  font-style:italic;
+  font-size:13px;
+}
+input[type=submit] { color:#333333; }
+#respond {
+  margin-top:24px;
+  border-top:1px solid #e7e7e7;
+  overflow:hidden;
+  position:relative;
+}
+#respond .comment-notes { margin-bottom:1em; }
+.form-allowed-tags { line-height:1em; }
+.children #respond { margin:0 48px 0 0; }
+h3#reply-title { margin:18px 0; }
+#comments-list #respond { margin:0 0 18px; }
+#cancel-comment-reply-link {
+  font-size:12px;
+  line-height:18px;
+  font-weight:400;
+}
+#respond .required {
+  color:#ff4b33;
+  font-weight:700;
+}
+#respond label {
+  color:#888888;
+  font-size:12px;
+}
+#respond input {
+  width:98%;
+  margin:0 0 9px;
+}
+#respond textarea { width:98%; }
+#respond dt, #respond dd {
+  color:#888888;
+  font-size:12px;
+  line-height:18px;
+}
+#respond dd code { font-size:11px; }
+#respond .form-submit { margin:0 0 24px; }
+#respond .form-submit input {
+  width:auto;
+  font-size:14px;
+}
+#respond dl { margin:0 0 10px; }
+#respond dt {
+  display:inline;
+  font-weight:400;
+}
+#respond dd { display:inline; }
+p.form-allowed-tags, .nocomments { display:none; }
+.commentlist, .commentlist .children {
+  list-style:none;
+  margin:0;
+}
+.comment-meta a:active, .comment-meta a:hover, .reply a:hover, a.comment-edit-link:hover { color:#ff4b33; }
+#respond p, #comments-list ul #respond { margin:0; }
+
+
+img.wp-post-image {
+  width:auto;
+  height:auto;
+}
