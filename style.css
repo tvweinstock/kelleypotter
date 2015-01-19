@@ -412,7 +412,7 @@ hr.carved {
 
 .main-img-container {
   width: 35%;
-  margin: 20px;
+  margin-right: 20px;
   float: left;
 }
 
@@ -421,7 +421,7 @@ hr.carved {
   border: 1px solid #fff;
   margin: 0 40px 20px 0;
   position: relative;
-  top: 40px;
+  top: 20px;
 }
 
 .welcome {

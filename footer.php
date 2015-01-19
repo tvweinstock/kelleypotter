@@ -20,6 +20,7 @@
     </div>
     <div class="copyright">
       <span>&copy; Kelley Potter 2015</span>
+      <?php wp_footer(); ?>
     </div>
   </div>
 </div>
